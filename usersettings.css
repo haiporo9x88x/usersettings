@@ -1,0 +1,1156 @@
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/_res/ThemeDevBadge.css);
+
+:root {
+	--settingswidth: 		1100;
+	--settingsheight: 		80;
+	--settingsbackground: 		transparent;
+
+	
+	--settingswidth_v: 		min(calc(1px * var(--settingswidth_s, var(--settingswidth))), 99vw);
+	--settingsheight_v: 		min(calc(1vh * var(--settingsheight_s, var(--settingsheight))), 99vh);
+	--settingsbackground_v: 	var(--settingsbackground_s, var(--settingsbackground));
+}
+
+/*
+* 
+*        USERS SETTINGS MODAL
+*          source: DevilBro
+* 
+*/
+#app-mount .baseLayer_d4b6c5 {
+	opacity: 1 !important;
+	transform: unset !important;
+	will-change: unset !important;
+}
+#app-mount .stop-animations * {
+	transition-property: inherit !important;
+	animation: inherit !important;
+}
+#app-mount .layer_d4b6c5.stop-animations:first-child::after {
+	content: "" !important;
+	position: fixed !important;
+	background: rgb(0, 0, 0) !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	opacity: 0.85 !important;
+	z-index: 999 !important;
+	pointer-events: none !important;
+}
+
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: var(--settingsbackground_v) !important;
+	border-radius: var(--card-radius-big) !important;
+	box-shadow: var(--elevation-high) !important;
+	width: var(--settingswidth_v) !important;
+	height: var(--settingsheight_v) !important;
+	margin: auto !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	contain: unset !important;
+	z-index: 1000 !important;
+	--settingsiconsadditionalsize: var(--use-settingsicons, 0) * (var(--settingsicons-size, 0px) + var(--settingsicons-gap, 0px));
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 > div,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .standardSidebarView_c25c6d {
+	position: static !important;
+	border-radius: unset !important;
+	width: 100% !important;
+	height: 100% !important;
+	margin: unset !important;
+	padding: unset !important;
+	overflow: hidden !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .sidebarRegion_c25c6d,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .sidebarRegionScroller_c25c6d {
+	flex: 0 0 auto !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .sidebar_c25c6d {
+	width: 218px !important;
+	padding: 20px 6px 20px 20px !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .contentColumnDefault_c25c6d,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .contentColumnWide_c25c6d {
+	padding: 20px 40px !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .wrapper_e5cdf3 {
+	width: calc(var(--settingswidth_v) - 420px - var(--settingsiconsadditionalsize)) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .repo_k8F4Sd {
+	max-width: calc(var(--settingswidth_v) - 226px - var(--settingsiconsadditionalsize)) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .repoHeader_2KfNvH {
+	padding-bottom: 0 !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .repoHeader_2KfNvH .tabBar_b9fccc {
+	gap: 30px !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .repoHeader_2KfNvH .quickSelectLabel__79774 {
+	font-size: 12px !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .repoScroller_9JnAPs {
+	padding-top: 0 !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .sidebar_e87574 {
+	height: var(--settingsheight_v) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .standardSidebarView_c25c6d .editor {
+	height: calc(var(--settingsheight_v) - 120px) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .toolsContainer_c25c6d,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .toolsContainer_c25c6d .tools_c25c6d,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .toolsContainer_c25c6d .container_df5532,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .toolsContainer_c25c6d .closeButton_df5532 {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+	width: 100% !important;
+	max-width: unset !important;
+	height: 100% !important;
+	max-height: unset !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	opacity: 0 !important;
+	cursor: default !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .toolsContainer_c25c6d {
+	position: fixed !important;
+	top: 22px !important;
+	z-index: -1 !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .settingsToolbar_wu4yfQ {
+	display: none !important;
+}
+
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .accountProfileCard_b69b77 {
+	max-width: calc(var(--settingswidth_v) - 332px - var(--settingsiconsadditionalsize)) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 {
+	gap: 30px !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .sectionsContainer_e466c8,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .sectionsContainer_b45d91,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .editor_eb2d2c,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 {
+	min-width: calc((var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) / 2) !important;
+	max-width: calc((var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983.tryItOutLayout_eb2d2c .sectionsContainer_e466c8,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983.tryItOutLayout_eb2d2c .sectionsContainer_b45d91,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983.tryItOutLayout_eb2d2c .editor_eb2d2c,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983.tryItOutLayout_eb2d2c .preview_bad983 {
+	min-width: calc((var(--settingswidth_v) - 364px - var(--settingsiconsadditionalsize)) / 2) !important;
+	max-width: calc((var(--settingswidth_v) - 364px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 .userPopoutOuter_c69a7b {
+	width: calc((var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .baseLayout_bad983.tryItOutLayout_eb2d2c .preview_bad983 .userPopoutOuter_c69a7b {
+	width: calc((var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) / 2) !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 .userPopoutOuter_c69a7b,
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .baseLayout_bad983.tryItOutLayout_eb2d2c .preview_bad983 .userPopoutOuter_c69a7b {
+	min-width: unset !important;
+	max-width: 340px !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 .userPopoutInner_c69a7b {
+	overflow: hidden !important;
+}
+#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .guildsSection__337a8 {
+	max-width: calc(var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) !important;
+}
+
+#app-mount .root_f906dd {
+	position: fixed !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	background: var(--settingsbackground_v) !important;
+	border-radius: 5px !important;
+	box-shadow: var(--elevation-high) !important;
+	width: var(--settingswidth_v) !important;
+	height: var(--settingsheight_v) !important;
+	margin: auto !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	contain: unset !important;
+	z-index: 1000 !important;
+}
+#app-mount .root_f906dd.enterDone_f906dd {
+	transform: unset !important;
+}
+#app-mount .root_f906dd .closeIconWrapper_a50853,
+#app-mount .root_f906dd .closeIconWrapper_a50853 .container_df5532,
+#app-mount .root_f906dd .closeIconWrapper_a50853 .closeButton_df5532,
+#app-mount .shop_e77fa3 .container_df5532,
+#app-mount .shop_e77fa3 .closeButton_df5532 {
+	position: fixed !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	z-index: -1 !important;
+	background: transparent !important;
+	border: none !important;
+	border-radius: 0 !important;
+	width: 100% !important;
+	max-width: unset !important;
+	height: 100% !important;
+	max-height: unset !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	opacity: 0 !important;
+	cursor: default !important;
+	animation: unset !important;
+	transition: unset !important;
+}
+#app-mount .root_f906dd .closeIconWrapper_a50853 {
+	top: 22px !important;
+}
+
+/*
+* 
+*        USERS SETTINGS -> Icons For Sidebars
+*   source: https://github.com/gold-me/DiscordIcons
+* 
+*/
+
+/* DEFINITIONS */
+@property --icon-size {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 24px;
+}
+@property --icon-gap {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 10px;
+}
+@property --icon-animations {
+  syntax: "true | false";
+  inherits: true;
+  initial-value: true;
+}
+@property --icon-expand {
+  syntax: "true | false";
+  inherits: true;
+  initial-value: false;
+}
+@property --icon-monocolor {
+  syntax: "true | false";
+  inherits: true;
+  initial-value: false;
+}
+@property --icon-permacolor {
+  syntax: "true | false";
+  inherits: true;
+  initial-value: true;
+}
+@property --icon-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: currentColor;
+}
+@property --icon-Default {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Indeterminate_Question_Box.svg");
+}
+@property --icon-MyAccount {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Manage_Accounts.svg");
+}
+@property --icon-ProfileCustomization {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Style.svg");
+}
+@property --icon-PrivacySafety {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Security.svg");
+}
+@property --icon-FamilyCenter {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Supervisor_Account.svg");
+}
+@property --icon-AuthorizedApps {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/App_Registration.svg");
+}
+@property --icon-Devices {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Devices.svg");
+}
+@property --icon-Connections {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Link.svg");
+}
+@property --icon-Clips {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Theaters.svg");
+}
+@property --icon-FriendRequests {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Group_Add.svg");
+}
+@property --icon-Nitro {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Discord/Nitro.svg");
+}
+@property --icon-ServerBoost {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Discord/Server_Boost.svg");
+}
+@property --icon-Subscriptions {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Fact_Check.svg");
+}
+@property --icon-Gifts {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Redeem.svg");
+}
+@property --icon-Billing {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Receipt_Long.svg");
+}
+@property --icon-Appearance {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Brush.svg");
+}
+@property --icon-Accessibility {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Accessibility_New.svg");
+}
+@property --icon-VoiceVideo {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Perm_Camera_Mic.svg");
+}
+@property --icon-Chat {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Chat.svg");
+}
+@property --icon-Notifications {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Notifications_Active.svg");
+}
+@property --icon-Keybinds {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Keyboard.svg");
+}
+@property --icon-Language {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Translate.svg");
+}
+@property --icon-Windows {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Logo-Windows.svg");
+}
+@property --icon-Mac {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Logo-Apple.svg");
+}
+@property --icon-Linux {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Logo-Tux.svg");
+}
+@property --icon-Streaming {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Videocam.svg");
+}
+@property --icon-Advanced {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Tune.svg");
+}
+@property --icon-Vencord {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/jdecked/twemoji/main/assets/svg/1f431.svg");
+}
+@property --icon-Plugins {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Extention.svg");
+}
+@property --icon-Themes {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Format_Paint.svg");
+}
+@property --icon-Updater {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/System_Update_Alt.svg");
+}
+@property --icon-Cloud {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Cloud.svg");
+}
+@property --icon-BackupRestore {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Backup.svg");
+}
+@property --icon-ActivityPrivacy {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Privacy.svg");
+}
+@property --icon-GameActivity {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Gamepad.svg");
+}
+@property --icon-Overlay {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Overlay.svg");
+}
+@property --icon-Changelog {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Update.svg");
+}
+@property --icon-Merch {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Shirt.svg");
+}
+@property --icon-HypeSquad {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Discord/HypeSquad.svg");
+}
+@property --icon-Experiments {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Experiment.svg");
+}
+@property --icon-DeveloperOptions {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-HotspotOptions {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-DismissibleConents {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-PaymentFlowModals {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-DesignSystems {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-TextPlayground {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-TextComponents {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-IntlTesting {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-ProfileEffectsPreview {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-WebSettingTreeTool {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Memory.svg");
+}
+@property --icon-Logout {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Logout.svg");
+}
+@property --icon-Overview {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Info.svg");
+}
+@property --icon-Roles {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Badge.svg");
+}
+@property --icon-Emoji {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Emoji.svg");
+}
+@property --icon-Stickers {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Stickers.svg");
+}
+@property --icon-Soundboard {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Soundboard.svg");
+}
+@property --icon-Widget {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Widgets.svg");
+}
+@property --icon-Template {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Library_Books.svg");
+}
+@property --icon-CustomInvite {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Share.svg");
+}
+@property --icon-Integrations {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Mediation.svg");
+}
+@property --icon-AppDirectory {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Apps.svg");
+}
+@property --icon-SafetySetup {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Safety_Setup.svg");
+}
+@property --icon-AutoMod {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/AutoMod.svg");
+}
+@property --icon-AuditLog {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Audit_Log.svg");
+}
+@property --icon-Bans {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Gavel.svg");
+}
+@property --icon-Onboarding {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Groups.svg");
+}
+@property --icon-Insights {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Insights.svg");
+}
+@property --icon-Partner {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Discord/Partner.svg");
+}
+@property --icon-Discovery {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Explore.svg");
+}
+@property --icon-Members {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Group.svg");
+}
+@property --icon-Invite {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Send.svg");
+}
+@property --icon-Permissions {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Permissions.svg");
+}
+@property --icon-Delete {
+  syntax: "<url>";
+  inherits: true;
+  initial-value: url("https://raw.githubusercontent.com/gold-me/DiscordIcons/master/Icons/SVG/Delete.svg");
+}
+
+[class^="standardSidebarView_"] {
+  
+/* Padding and Icons */
+.side_a0 .item_a0 {
+  padding: calc((32px - var(--icon-size)) / 2) 4px !important;
+}
+.side_a0 .item_a0::before {
+  content: "";
+  float: left;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  margin-right: 8px;
+  opacity: 0.5;
+  transition: 160ms;
+  mask: var(--icon-Default) center/contain no-repeat;
+  background: currentColor;
+}
+.side_a0 .item_a0 {
+  line-height: var(--icon-size);
+}
+.side_a0 .item_a0 .dot-2s_oHI {
+  background-color: var(--bd-blue);
+}
+.side_a0 .item_a0:hover::before {
+  opacity: 0.7;
+}
+.side_a0 .item_a0[class*="selected"]::before {
+  opacity: 1;
+}
+  
+/* Icon Coloring */
+  
+@container style(--icon-monocolor: false) {
+  .side_a0 .item_a0[class*="selected"]::before,
+  .side_a0 .item_a0:hover::before {
+    background-color: var(--icon-color);
+  }
+}
+@container style(--icon-permacolor: true) {
+  .side_a0 .item_a0::before {
+    background-color: var(--icon-color);
+  }
+}
+  
+  
+  
+/* Button Hover & Animations */
+@container style(--icon-animations: true) {
+  [class^="sidebar_"] .item_a0 {
+    transform: translateZ(0);
+    transition: 220ms;
+  }
+  
+  [class^="sidebar_"] .item_a0:hover,
+  [class^="sidebar_"] .selected_a0.item_a0 {
+    transform: translateX(8px);
+    transition: 160ms;
+  }
+}
+  
+/* Icons Expansion */
+@container style(--icon-expand: true) {
+  [class^="sidebar_"] .item_a0:hover,
+  .selected_a0.item_a0 {
+    min-width: calc(var(--custom-standard-sidebar-view-sidebar-content-width) + (var(--icon-size) * (1 + (1 / 3))));
+    margin-left: calc(-1 * var(--icon-size) * (1 + (1 / 3)));
+  }
+}
+  
+/* Misc .Fixes */
+[class^="serverBoostTabItem_"][aria-selected="true"] {
+  background-color: var(--background-modifier-selected) !important;
+}
+}
+  
+/* You have ThemeAttributes :) */
+[class^="standardSidebarView_"]:has([data-tab-id]) .side_a0 {
+  
+/* Nitro, Server Boost & Subscriptions Selected Color Fix */
+.selected_a0.item_a0[data-tab-id="Discord Nitro" i] [class^="background_"] {
+  background-color: unset !important;
+  z-index: 0;
+}
+[class^="serverBoostTabItem_"].selected_a0.item_a0,
+.selected_a0.item_a0 [class^="premiumLabel_"] {
+  color: inherit !important;
+}
+  
+/* Remove Unnesecary Icons */
+[class^="premiumLabel_"] svg,
+[class*="serverBoostTabItem_"] .icon_f7189e,
+.item_a0[data-tab-id="DELETE" i] [class^="tabBarItemContainer_"] svg,
+.item_a0[data-tab-id="logout"] [class^="tabBarItemContainer_"] svg {
+  display: none;
+}
+  
+/* Settings: My Account */
+.item_a0[data-tab-id="My Account" i]::before {
+  mask: var(--icon-MyAccount, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: maroon;
+}
+  
+/* Settings: Profiles */
+.item_a0[data-tab-id="Profile Customization" i]::before {
+  mask: var(--icon-ProfileCustomization, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: red;
+}
+  
+/* Settings: Privacy & Safety */
+.item_a0[data-tab-id="Privacy & Safety" i]::before {
+  mask: var(--icon-PrivacySafety, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: coral;
+}
+  
+/* Settings: Family Center */
+.item_a0[data-tab-id="Family Center" i]::before {
+  mask: var(--icon-FamilyCenter, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: orange;
+}
+  
+/* Settings: Authorized Apps */
+.item_a0[data-tab-id="Authorized Apps" i]::before {
+  mask: var(--icon-AuthorizedApps, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: yellow;
+}
+  
+/* Settings: Devices */
+.item_a0[data-tab-id="Sessions" i]::before {
+  mask: var(--icon-Devices, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: olive;
+}
+  
+/* Settings: Connections */
+.item_a0[data-tab-id="Connections" i]::before {
+  mask: var(--icon-Connections, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: chartreuse;
+}
+  
+/* Settings: Clips */
+.item_a0[data-tab-id="Settings Clips" i]::before {
+  mask: var(--icon-Clips, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: green;
+}
+  
+/* Settings: Friend Requests */
+.item_a0[data-tab-id="Friend Requests" i]::before {
+  mask: var(--icon-FriendRequests, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: lime;
+}
+
+/* Settings: Discord Nitro */
+.item_a0[data-tab-id="Discord Nitro" i]::before {
+  mask: var(--icon-Nitro) center/contain no-repeat;
+  --icon-color: navy;
+}
+  
+/* Settings: Server Boost */
+.item_a0[data-tab-id="Nitro Server Boost" i]::before {
+  mask: var(--icon-ServerBoost, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: blue;
+}
+  
+/* Settings: Subscriptions */
+.item_a0[data-tab-id="Subscriptions" i]::before {
+  mask: var(--icon-Subscriptions, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: royalblue;
+}
+  
+/* Settings: Gift Inventory */
+.item_a0[data-tab-id="Library Inventory" i]::before {
+  mask: var(--icon-Gifts, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: indigo;
+}
+  
+/* Settings: Billing */
+.item_a0[data-tab-id="Billing" i]::before {
+  mask: var(--icon-Billing, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: darkmagenta;
+}
+  
+/* Settings: Appearance */
+.item_a0[data-tab-id="Appearance" i]::before {
+  mask: var(--icon-Appearance, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: purple;
+}
+  
+/* Settings: Appearance */
+.item_a0[data-tab-id="Accessibility" i]::before {
+  mask: var(--icon-Accessibility, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: magenta;
+}
+  
+/* Settings: Voice & Video */
+.item_a0[data-tab-id="Voice & Video" i]::before {
+  mask: var(--icon-VoiceVideo, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: violet;
+}
+  
+/* Settings: Chat */
+.item_a0[data-tab-id="Text & Images" i]::before {
+  mask: var(--icon-Chat, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: hotpink;
+}
+  
+/* Settings: Notifications */
+.item_a0[data-tab-id="Notifications" i]::before {
+  mask: var(--icon-Notifications, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: pink;
+}
+  
+/* Settings: Keybinds */
+.item_a0[data-tab-id="Keybinds" i]::before {
+  mask: var(--icon-Keybinds, var(--icon-Default)) center/contain no-repeat;
+  --icon-color:  beige;
+}
+  
+/* Settings: Language */
+.item_a0[data-tab-id="Language" i]::before {
+  mask: var(--icon-Language, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: sienna; 
+}
+  
+/* Settings: Windows Settings */
+.item_a0[data-tab-id="Windows" i]::before {
+  mask: var(--icon-Windows, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: chocolate;
+}
+  
+/* Settings: Linux Settings */
+.item_a0[data-tab-id="Linux" i]::before {
+  mask: var(--icon-Linux, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: tan;
+}
+  
+/* Settings: Streamer Mode */
+.item_a0[data-tab-id="Streamer Mode" i]::before {
+  mask: var(--icon-Streaming, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: rosybrown;
+}
+  
+/* Settings: Advanced */
+.item_a0[data-tab-id="Advanced" i]::before {
+  mask: var(--icon-Advanced, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: moccasin;
+}
+  
+/* Settings: Vencord Icons */
+.item_a0[data-tab-id="VencordSettings" i]::before {
+  mask: var(--icon-Vencord, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: teal;
+}
+  
+.item_a0[data-tab-id="VencordPlugins" i]::before {
+  mask: var(--icon-Plugins, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: cyan;
+}
+  
+.item_a0[data-tab-id="VencordThemes" i]::before {
+  mask: var(--icon-Themes, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: turquoise;
+}
+  
+.item_a0[data-tab-id="VencordUpdater" i]::before {
+  mask: var(--icon-Updater, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: cadetblue;
+}
+  
+.item_a0[data-tab-id="VencordCloud" i]::before {
+  mask: var(--icon-Cloud, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: dodgerblue;
+}
+  
+.item_a0[data-tab-id="VencordSettingsSync" i]::before {
+  mask: var(--icon-BackupRestore, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: midnightblue;
+}
+  
+/* Settings: Activity Privacy */
+.item_a0[data-tab-id="Activity Privacy" i]::before {
+  mask: var(--icon-ActivityPrivacy, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: whitesmoke;
+}
+  
+/* Settings: Registered Games */
+.item_a0[data-tab-id="Game Activity" i]::before {
+  mask: var(--icon-GameActivity, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: lightsteelblue;
+}
+  
+/* Settings: Overlay */
+.item_a0[data-tab-id="Overlay" i]::before {
+  mask: var(--icon-Overlay, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: darkgray;
+}
+  
+/* Settings: What's New */
+.item_a0[data-tab-id="changelog" i]::before {
+  mask: var(--icon-Changelog, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: dimgray;
+}
+  
+/* Settings: Merch */
+.item_a0[data-tab-id="merchandise" i]::before {
+  mask: var(--icon-Merch, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: slategray;
+}
+  
+/* Settings: HypeSquad */
+.item_a0[data-tab-id="Hypesquad Online" i]::before {
+  mask: var(--icon-HypeSquad, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: black;
+}
+  
+/* Settings: Experiments */
+.item_a0[data-tab-id="Experiments" i]::before {
+  mask: var(--icon-Experiments, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Developer Options */
+.item_a0[data-tab-id="Developer Options" i]::before {
+  mask: var(--icon-DeveloperOptions, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Hotspot Options */
+.item_a0[data-tab-id="Hotspot Options" i]::before {
+  mask: var(--icon-HotspotOptions, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Dismissible Contents */
+.item_a0[data-tab-id="Dismissible Content Options" i]::before {
+  mask: var(--icon-DismissibleConents, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Payment Flow Modals */
+.item_a0[data-tab-id="Payment Flow Modals" i]::before {
+  mask: var(--icon-PaymentFlowModals, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Design Systems */
+.item_a0[data-tab-id="Design System" i]::before {
+  mask: var(--icon-DesignSystems, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Text Playground */
+.item_a0[data-tab-id="Text Playground" i]::before {
+  mask: var(--icon-TextPlayground, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Text Components */
+.item_a0[data-tab-id="Text Component" i]::before {
+  mask: var(--icon-TextComponents, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Intl Testing */
+.item_a0[data-tab-id="Intl Testing" i]::before {
+  mask: var(--icon-IntlTesting, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Profile Effects Preview Tool */
+.item_a0[data-tab-id="Profile Effects Preview Tool" i]::before {
+  mask: var(--icon-ProfileEffectsPreview, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Settings: Web Setting Tree Tool */
+.item_a0[data-tab-id="Web Setting Tree Tool" i]::before {
+  mask: var(--icon-WebSettingTreeTool, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Log Out */
+.item_a0[data-tab-id="logout"]::before {
+  mask: var(--icon-Logout) center/contain no-repeat;
+}
+
+/* 
+*  SERVER ICONS
+*/    
+  
+/* Server: Overview */
+.item_a0[data-tab-id="OVERVIEW"]::before {
+  mask: var(--icon-Overview, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Roles */
+.item_a0[data-tab-id="ROLES"]::before {
+  mask: var(--icon-Roles, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Emoji */
+.item_a0[data-tab-id="EMOJI"]::before {
+  mask: var(--icon-Emoji, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Stickers */
+.item_a0[data-tab-id="STICKERS"]::before {
+  mask: var(--icon-Stickers, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Soundboard */
+.item_a0[data-tab-id="SOUNDBOARD"]::before {
+  mask: var(--icon-Soundboard, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Widgets */
+.item_a0[data-tab-id="WIDGET"]::before {
+  mask: var(--icon-Widget, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Server Template */
+.item_a0[data-tab-id="GUILD_TEMPLATES"]::before {
+  mask: var(--icon-Template, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Custom Invite Link */
+.item_a0[data-tab-id="VANITY_URL"]::before {
+  mask: var(--icon-CustomInvite, var(--icon-Default)) center/contain no-repeat;
+}
+
+/* Server - Apps: Integrations */
+.item_a0[data-tab-id="INTEGRATIONS"]::before {
+  mask: var(--icon-Integrations, var(--icon-Default)) center/contain no-repeat;
+}
+
+/* Server - Apps: App Directory */
+.item_a0[data-tab-id="APP_DIRECTORY"]::before {
+  mask: var(--icon-AppDirectory, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Moderation: Safety Setup */
+.item_a0[data-tab-id="MODERATION"]::before,
+.item_a0[data-tab-id="SAFETY"]::before {
+  mask: var(--icon-SafetySetup, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Moderation: AutoMod */
+.item_a0[data-tab-id="GUILD_AUTOMOD"]::before {
+  mask: var(--icon-AutoMod, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Moderation: Audit Log */
+.item_a0[data-tab-id="AUDIT_LOG"]::before {
+  mask: var(--icon-AuditLog, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Moderation: Bans */
+.item_a0[data-tab-id="BANS"]::before {
+  mask: var(--icon-Bans, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Community: Overview/Enable Community */
+.item_a0[data-tab-id="COMMUNITY"]::before {
+  mask: var(--icon-Overview, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Community: Onboarding */
+.item_a0[data-tab-id="ONBOARDING"]::before {
+  mask: var(--icon-Onboarding, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Community: Insights */
+.item_a0[data-tab-id="ANALYTICS"]::before {
+  mask: var(--icon-Insights, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server Community: Partner Program Icon */
+.item_a0[data-tab-id="PARTNER"]::before {
+  mask: var(--icon-Partner, var(--icon-Default));
+}
+  
+/* Server - Community: Discovery */
+.item_a0[data-tab-id="DISCOVERY"]::before {
+  mask: var(--icon-Discovery, var(--icon-Default)) center/contain no-repeat;
+}
+
+/* Server - Monetization: Server Subscriptions */
+.item_a0[data-tab-id="ROLE_SUBSCRIPTIONS"]::before {
+  mask: var(--icon-Subscriptions, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server - Monetization: Server Boost Status */
+.item_a0[data-tab-id="GUILD_PREMIUM"]::before {
+  mask: var(--icon-ServerBoost, var(--icon-Default)) center/contain no-repeat;
+  --icon-color: var(--guild-boosting-pink);
+}
+
+/* Server - User Management: Members */
+.item_a0[data-tab-id="MEMBERS"]::before {
+  mask: var(--icon-Members, var(--icon-Default)) center/contain no-repeat;
+}
+
+/* Server: Invites */
+.item_a0[data-tab-id="INSTANT_INVITES"]::before {
+  mask: var(--icon-Invite, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Permissions */
+.item_a0[data-tab-id="PERMISSIONS"]::before {
+  mask: var(--icon-Permissions, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Server: Delete Icon */
+.item_a0[data-tab-id="DELETE"]::before {
+  mask: var(--icon-Delete, var(--icon-Default)) center/contain no-repeat;
+}
+  
+/* Make Delete/Logout Buttons Red */
+.item_a0[data-tab-id="DELETE"],
+.item_a0[data-tab-id="logout"] {
+  color: var(--info-danger-foreground) !important;
+} 
+.item_a0[data-tab-id="DELETE"]:hover,
+.item_a0[data-tab-id="logout"]:hover {
+  background-color: var(--info-danger-background) !important;
+}
+.item_a0[data-tab-id="DELETE"]::before,
+.item_a0[data-tab-id="logout"]::before {
+  background-color: var(--info-danger-foreground) !important;
+  opacity: 0.6;
+}
+.item_a0[data-tab-id="DELETE"]:hover::before,
+.item_a0[data-tab-id="logout"]:hover::before {
+  opacity: 1;
+}
+}
