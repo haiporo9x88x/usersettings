@@ -155,16 +155,12 @@
 	min-width: calc((var(--settingswidth_v) - 364px - var(--settingsiconsadditionalsize)) / 2) !important;
 	max-width: calc((var(--settingswidth_v) - 364px - var(--settingsiconsadditionalsize)) / 2) !important;
 }
-#app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 .userPopoutOuter_c69a7b {
-	width: calc((var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) / 2) !important;
-}
 #app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .baseLayout_bad983.tryItOutLayout_eb2d2c .preview_bad983 .userPopoutOuter_c69a7b {
 	width: calc((var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) / 2) !important;
 }
 #app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 .userPopoutOuter_c69a7b,
 #app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .baseLayout_bad983.tryItOutLayout_eb2d2c .preview_bad983 .userPopoutOuter_c69a7b {
 	min-width: unset !important;
-	max-width: 340px !important;
 }
 #app-mount .layer_d4b6c5 ~ .layer_d4b6c5 .profileCustomizationSection_bad983 .baseLayout_bad983 .preview_bad983 .userPopoutInner_c69a7b {
 	overflow: hidden !important;
@@ -195,9 +191,7 @@
 }
 #app-mount .root_fccaa9 .closeIconWrapper_a50853,
 #app-mount .root_fccaa9 .closeIconWrapper_a50853 .container_df5532,
-#app-mount .root_fccaa9 .closeIconWrapper_a50853 .closeButton_df5532,
-#app-mount .shop_e77fa3 .container_df5532,
-#app-mount .shop_e77fa3 .closeButton_df5532 {
+#app-mount .root_fccaa9 .closeIconWrapper_a50853 .closeButton_df5532 {
 	position: fixed !important;
 	top: 0 !important;
 	right: 0 !important;
