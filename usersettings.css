@@ -173,7 +173,7 @@
 	max-width: calc(var(--settingswidth_v) - 352px - var(--settingsiconsadditionalsize)) !important;
 }
 
-#app-mount .root_f906dd {
+#app-mount .root_fccaa9 {
 	position: fixed !important;
 	top: 0 !important;
 	right: 0 !important;
@@ -190,12 +190,12 @@
 	contain: unset !important;
 	z-index: 1000 !important;
 }
-#app-mount .root_f906dd.enterDone_f906dd {
+#app-mount .root_fccaa9.enterDone_fccaa9 {
 	transform: unset !important;
 }
-#app-mount .root_f906dd .closeIconWrapper_a50853,
-#app-mount .root_f906dd .closeIconWrapper_a50853 .container_df5532,
-#app-mount .root_f906dd .closeIconWrapper_a50853 .closeButton_df5532,
+#app-mount .root_fccaa9 .closeIconWrapper_a50853,
+#app-mount .root_fccaa9 .closeIconWrapper_a50853 .container_df5532,
+#app-mount .root_fccaa9 .closeIconWrapper_a50853 .closeButton_df5532,
 #app-mount .shop_e77fa3 .container_df5532,
 #app-mount .shop_e77fa3 .closeButton_df5532 {
 	position: fixed !important;
@@ -218,7 +218,7 @@
 	animation: unset !important;
 	transition: unset !important;
 }
-#app-mount .root_f906dd .closeIconWrapper_a50853 {
+#app-mount .root_fccaa9 .closeIconWrapper_a50853 {
 	top: 22px !important;
 }
 
